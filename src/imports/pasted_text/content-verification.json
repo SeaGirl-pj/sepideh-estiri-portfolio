@@ -1,0 +1,1229 @@
+Create a complete, production-ready, multi-page personal portfolio website for:
+
+Name: Sepideh Estiri
+Logo: S3.
+Primary language: English
+Portfolio type: Professional software-development and healthcare-IT portfolio
+
+LinkedIn source:
+https://www.linkedin.com/in/sepideh-estiri-a08201317/
+
+IMPORTANT SOURCE-OF-TRUTH RULES
+
+This website must be based entirely on verified, real information.
+
+Use information only from the following sources, in this priority order:
+
+1. Sepideh Estiri’s LinkedIn profile and LinkedIn posts
+2. Sepideh Estiri’s GitHub repositories and their README files
+3. The supplied resume PDF
+4. Files, screenshots, certificates, and notes supplied directly by the portfolio owner
+
+Do not invent or infer:
+
+- Projects
+- Project names
+- Project descriptions
+- Project outcomes
+- Statistics
+- Years of experience
+- Job responsibilities
+- Education details
+- Skill levels
+- Certificates
+- Credential IDs
+- Credential URLs
+- Live-demo URLs
+- GitHub URLs
+- Awards
+- Testimonials
+- Client names
+- Technologies used in a project
+- Project screenshots
+- Dates
+- Employment status
+- Availability status
+
+Never use placeholder content such as:
+
+- Lorem ipsum
+- Sample Project
+- Analytics Dashboard
+- Clinic Dashboard
+- 100+ completed projects
+- 99% customer satisfaction
+- Available for work
+- Trusted by clients
+- Fake testimonials
+- Fake company logos
+- Fake project metrics
+
+If information cannot be verified, do not display it on the production website.
+
+Create a file named:
+
+/content/content-verification.json
+
+Every portfolio item must contain:
+
+{
+  "verified": true,
+  "sourceType": "linkedin | github | resume | owner-provided",
+  "sourceUrl": "",
+  "sourceDate": "",
+  "lastChecked": ""
+}
+
+The production build must fail if:
+
+- A visible item has verified: false
+- A project has no authentic source
+- A certificate has no authentic source
+- A screenshot is not supplied by the owner or extracted from an authentic owner post
+- Placeholder text remains
+- A fake link remains
+- Edu Voice AI appears anywhere
+
+ABSOLUTE PROJECT EXCLUSION
+
+Do not include “Edu Voice AI” anywhere in the website.
+
+Remove it from:
+
+- Featured Projects
+- Projects page
+- Search data
+- Metadata
+- Alt text
+- Image filenames
+- Project filters
+- Sitemap
+- Structured data
+- Open Graph content
+- Source code comments
+
+Do not replace it with an invented project.
+
+LINKEDIN CONTENT COLLECTION
+
+Before generating final content:
+
+1. Read the LinkedIn headline.
+2. Read the About section exactly.
+3. Read all Experience entries.
+4. Read all Education entries.
+5. Read Skills.
+6. Read Licenses & Certifications.
+7. Read Featured items.
+8. Review Sepideh Estiri’s LinkedIn posts.
+9. Identify posts that show software projects or applications built by Sepideh.
+10. Extract only project information explicitly shown in those posts.
+11. Use the original project screenshots from those posts.
+12. Record the URL of every post used as a source.
+13. Cross-check every project against its GitHub repository when available.
+14. Do not scrape private or authenticated content automatically.
+15. Use LinkedIn exports, screenshots, downloaded post media, or user-supplied assets when direct access is unavailable.
+
+Use the supplied LinkedIn profile export PDF as the primary LinkedIn data source when the public page cannot be accessed.
+
+CONTENT CONFLICT RULE
+
+When two sources conflict:
+
+- LinkedIn is the primary source for current professional headline, experience, education, dates, skills, and certifications.
+- GitHub is the primary source for code, repositories, technical stack, installation instructions, and project features.
+- The resume can supplement missing information but must not override newer LinkedIn information.
+- Owner-provided corrections override all other sources.
+
+Never silently resolve a conflict.
+
+Record conflicts inside:
+
+/content/source-conflicts.json
+
+Do not publish conflicted information until it is confirmed.
+
+PRIVACY RULES
+
+Do not publicly display these resume fields:
+
+- Age
+- Gender
+- Marital status
+- Salary expectation
+- Exact home address
+- National identification information
+- Personal phone number, unless explicitly approved
+- Any private information not intentionally published on LinkedIn
+
+Contact information should be limited to verified professional contact channels:
+
+- LinkedIn
+- GitHub
+- Professional email
+- Optional contact form
+
+Do not show the full phone number unless the owner explicitly enables it in the content configuration.
+
+DESIGN DIRECTION
+
+Create a distinctive, bright, elegant and professional portfolio.
+
+The design must not look like a typical dark-blue developer portfolio.
+
+Visual personality:
+
+- Modern
+- Creative
+- Professional
+- Clean
+- Feminine without looking childish
+- Technology-focused
+- Light and spacious
+- Visually memorable
+- Suitable for software development and healthcare IT
+
+Use a light interface with a controlled blue, pink, orange and violet gradient system.
+
+COLOR PALETTE
+
+Main background:
+#F7F8FC
+
+Secondary background:
+#FFF9FC
+
+White cards:
+#FFFFFF
+
+Primary blue:
+#2563EB
+
+Light blue:
+#7FA7D9
+
+Sky blue:
+#7DD3FC
+
+Pink:
+#FF5CA8
+
+Orange:
+#FF6F3C
+
+Violet:
+#8B5CF6
+
+Main text:
+#0F172A
+
+Secondary text:
+#64748B
+
+Borders:
+#E2E8F0
+
+Soft pink background:
+#FFF0F6
+
+Soft blue background:
+#EFF6FF
+
+Soft orange background:
+#FFF4ED
+
+Main gradient:
+linear-gradient(
+  100deg,
+  #2563EB 0%,
+  #8B5CF6 38%,
+  #FF5CA8 70%,
+  #FF6F3C 100%
+)
+
+Use the gradient only for:
+
+- The S3. logo
+- Important words in headings
+- Primary CTA buttons
+- Small decorative shapes
+- Active navigation indicators
+- Selected icons
+- Project-card hover borders
+- Section accents
+
+Do not use the gradient on large bodies of text.
+
+Do not cover the entire background with strong gradients.
+
+Recommended color distribution:
+
+- 70% white and light neutral backgrounds
+- 15% dark text
+- 8% blue
+- 4% pink
+- 2% orange
+- 1% violet
+
+TYPOGRAPHY
+
+Use:
+
+- Plus Jakarta Sans or Manrope for headings
+- Inter for body text
+- A strong sans-serif style rather than a decorative serif style
+
+Typography must feel modern and technical.
+
+Heading style:
+
+- Large
+- Bold
+- Compact line height
+- Slight negative letter spacing
+
+Body text:
+
+- 16–18px desktop
+- Minimum 15px mobile
+- Comfortable line height
+- Maximum paragraph width around 650px
+
+LOGO
+
+The logo must be:
+
+S3.
+
+Do not use:
+
+- SE
+- Se
+- S.E.
+- A generic code icon
+
+Logo treatment:
+
+- “S” in blue
+- “3” in pink or orange
+- Small period in orange
+- Use the main portfolio gradient when appropriate
+- Simple typographic wordmark
+- No complex symbol
+- Must remain readable at favicon size
+
+Create:
+
+- Header logo
+- Footer logo
+- SVG favicon
+- Apple touch icon
+- Social preview mark
+
+The accessible label must be:
+
+“Sepideh Estiri home”
+
+TECHNOLOGY STACK
+
+Build the website using:
+
+- Next.js with App Router
+- TypeScript
+- Tailwind CSS
+- Framer Motion
+- Lucide icons
+- Next/Image
+- Static content files or a lightweight typed content layer
+
+Do not introduce a CMS unless specifically requested.
+
+The website must be deployable to Vercel.
+
+Use:
+
+- Semantic HTML
+- Server components when possible
+- Client components only when interaction is needed
+- Optimized images
+- Route-based metadata
+- Static generation for portfolio pages
+
+FOLDER STRUCTURE
+
+Use a clear structure similar to:
+
+/app
+  /page.tsx
+  /about/page.tsx
+  /projects/page.tsx
+  /projects/[slug]/page.tsx
+  /skills/page.tsx
+  /certificates/page.tsx
+  /experience/page.tsx
+  /contact/page.tsx
+  /not-found.tsx
+  /sitemap.ts
+  /robots.ts
+
+/components
+  /layout
+  /home
+  /projects
+  /skills
+  /certificates
+  /experience
+  /contact
+  /ui
+
+/content
+  profile.json
+  experience.json
+  education.json
+  skills.json
+  certificates.json
+  projects.json
+  content-verification.json
+  source-conflicts.json
+
+/public
+  /images/profile
+  /images/projects
+  /images/certificates
+  /documents
+
+/lib
+  content.ts
+  validation.ts
+  metadata.ts
+  image-manifest.ts
+
+/scripts
+  validate-content.ts
+  validate-links.ts
+  validate-images.ts
+
+PAGE 1 — HOME
+
+Route:
+/
+
+HEADER
+
+Create a sticky, translucent white header.
+
+Left:
+
+- S3. logo
+
+Center or right navigation:
+
+- Home
+- About
+- Projects
+- Skills
+- Certificates
+- Experience
+- Contact
+
+Right-side CTA:
+
+- Download CV
+
+The CV button must link to the supplied real resume PDF.
+
+Do not create a fake resume file.
+
+On mobile:
+
+- Use an accessible hamburger menu
+- Lock background scrolling while open
+- Close the menu after route selection
+- Support keyboard navigation
+- Include visible focus states
+
+HERO SECTION
+
+Use a two-column desktop layout.
+
+Left column:
+
+- Small introduction badge
+- Full name
+- Verified professional headline
+- Short verified summary
+- Primary CTA
+- Secondary CTA
+- Social links
+
+Name:
+
+Sepideh Estiri
+
+The professional headline must be extracted from the latest LinkedIn profile.
+
+Do not permanently hard-code “Full-stack Developer” unless it is confirmed by the current LinkedIn profile or explicitly approved by the owner.
+
+A secondary descriptor may mention software development or healthcare IT only when supported by verified sources.
+
+Suggested hierarchy:
+
+Hello, I’m
+Sepideh Estiri
+[Verified LinkedIn headline]
+
+The hero summary must use only facts found in the LinkedIn About section or resume.
+
+Do not write generic claims such as:
+
+- I create amazing digital experiences
+- I help brands grow
+- Passionate developer changing the world
+- Award-winning developer
+
+Hero buttons:
+
+Primary:
+View My Projects
+
+Secondary:
+Contact Me
+
+Optional third link:
+Download CV
+
+Social icons:
+
+- GitHub
+- LinkedIn
+- Email
+
+Only show GitHub when the correct profile URL is verified.
+
+RIGHT HERO VISUAL
+
+Use Sepideh Estiri’s real, owner-approved professional photograph.
+
+Do not generate an AI portrait.
+
+Do not use a stock photo.
+
+Do not recreate or modify facial features.
+
+Use the supplied original profile photo.
+
+Display it inside:
+
+- A rounded rectangle portrait card
+- Approximately 24–32px corner radius
+- Soft blue/pink/orange gradient glow
+- Small abstract gradient circles behind the image
+- Subtle dotted grid
+- No excessive decoration
+
+Do not display a “2+ years” badge unless the exact duration is calculated from verified experience dates.
+
+When shown, calculate it automatically rather than hard-coding it.
+
+HOME FEATURED PROJECTS
+
+Display 3 or 4 real projects only.
+
+Project order should follow:
+
+1. Projects featured on LinkedIn
+2. Most complete project
+3. Most recent project
+4. Most relevant project to the target role
+
+Do not include Edu Voice AI.
+
+Every project card must contain:
+
+- Real project screenshot
+- Exact project name
+- One-sentence verified description
+- Verified technology tags
+- GitHub link, when available
+- Live link, when available
+- Project-details link
+- Source reference stored internally
+
+Do not use artificial dashboard illustrations.
+
+Do not create mock screenshots.
+
+Use images from Sepideh’s actual LinkedIn project posts or supplied project files.
+
+HOME SKILLS PREVIEW
+
+Show a short preview of verified skills.
+
+Display 6–8 important skills.
+
+Do not assign skill levels unless they are explicitly listed in LinkedIn or the resume.
+
+Possible skills may only be included after verification.
+
+Use real technology icons.
+
+Each skill can link to the Skills page.
+
+HOME EXPERIENCE PREVIEW
+
+Show:
+
+- Current or most recent verified role
+- Organization
+- Date range
+- Short verified description
+
+Do not rewrite responsibilities into exaggerated achievements.
+
+HOME CERTIFICATE PREVIEW
+
+Show the 3 most relevant verified certificates.
+
+Each card must contain:
+
+- Certificate name
+- Issuing organization
+- Issue date
+- Credential button
+- Authentic issuer logo or certificate image
+
+Do not show a certificate without a verified credential source.
+
+HOME CTA
+
+Use a soft blue-pink-orange gradient strip.
+
+Heading example:
+
+Let’s build something useful.
+
+Only use this as a CTA heading, not as a claim about previous client work.
+
+Buttons:
+
+- Contact Me
+- View LinkedIn
+
+PAGE 2 — ABOUT
+
+Route:
+/about
+
+Use only the verified LinkedIn About section and approved resume information.
+
+Include:
+
+1. Introductory biography
+2. Professional focus
+3. Technical interests
+4. Working approach
+5. Languages
+6. Optional personal interests only when intentionally published by the owner
+
+Do not create fictional personal stories.
+
+Do not invent childhood interests or career motivations.
+
+Layout:
+
+- Left: real portrait or work photo
+- Right: structured biography
+- Bottom: professional values or working principles
+
+Professional-value cards may include only supported ideas.
+
+Avoid unsupported labels such as:
+
+- Leadership expert
+- Product strategist
+- UX specialist
+- AI engineer
+
+Do not show numeric statistics unless they can be calculated from verified data.
+
+LANGUAGES
+
+Display language proficiency exactly as stated in LinkedIn or resume.
+
+Do not convert “Advanced” into “Fluent” or “Native”.
+
+PAGE 3 — PROJECTS
+
+Route:
+/projects
+
+Create a project archive using only verified projects.
+
+Top section:
+
+- Page title
+- Short source-based introduction
+- Filter controls
+
+Filters should be generated from actual project technologies.
+
+Possible filters:
+
+- All
+- Python
+- Django
+- JavaScript
+- React
+- Next.js
+- Node.js
+- Database
+
+Only display a filter when at least one verified project uses it.
+
+PROJECT CARD REQUIREMENTS
+
+Every project card must show:
+
+- Authentic screenshot
+- Exact project title
+- Verified summary
+- Verified role
+- Verified stack
+- Project date, if known
+- GitHub button, if available
+- Live Demo button, if available
+- Case Study button
+
+Do not show disabled fake links.
+
+When no live deployment exists, omit the Live Demo button.
+
+PROJECT IMAGE RULES
+
+For project images:
+
+- Use screenshots downloaded from Sepideh Estiri’s LinkedIn posts.
+- Preserve the original screenshot.
+- Do not place unrelated UI inside a device mockup.
+- Do not alter figures, labels, numbers, or interface content.
+- Minor cropping for layout is allowed.
+- Never generate fake project screens with AI.
+- Never use stock dashboard screenshots.
+- Never use screenshots belonging to another developer.
+- Add descriptive alt text based on the actual image.
+
+When a LinkedIn post contains several images:
+
+- Create an image gallery
+- Preserve the original order
+- Use the first image as the project cover only when it clearly represents the app
+- Store the LinkedIn post URL in the project data
+
+PAGE 4 — INDIVIDUAL PROJECT PAGE
+
+Route:
+/projects/[slug]
+
+Generate one page for each verified project.
+
+Project detail structure:
+
+1. Project header
+2. Project cover image
+3. Short overview
+4. Problem or operational need
+5. Sepideh’s role
+6. Features
+7. Technology stack
+8. Technical implementation
+9. Challenges
+10. Screenshots gallery
+11. Repository or demo links
+12. Related LinkedIn post
+13. Next-project navigation
+
+Only include a section when its content can be verified.
+
+Do not invent:
+
+- Project results
+- User numbers
+- Revenue impact
+- Performance improvements
+- Client feedback
+- Team size
+- Development duration
+
+SAFEHANDS PROJECT
+
+SafeHands is a real known project, but all details must still be cross-checked against LinkedIn posts, GitHub and owner-supplied information before publishing.
+
+Candidate information to verify:
+
+- Python-based accounting and inventory management application
+- Built for a clinic
+- Separate admin and personnel panels
+- Daily financial-record review
+- Cash-payment records
+- Card-transaction records
+- Total-income review
+- Responsible personnel
+- Transaction dates
+- Locking approved records
+- Unlocking records for authorized corrections
+- Improving accountability and data integrity
+
+Publish only the points that are confirmed by the actual source material.
+
+Use authentic SafeHands screenshots from Sepideh’s LinkedIn posts.
+
+Do not replace them with generic admin-dashboard images.
+
+PAGE 5 — SKILLS
+
+Route:
+/skills
+
+Create skill categories based on verified LinkedIn skills.
+
+Possible categories:
+
+- Programming Languages
+- Backend Development
+- Frontend Development
+- Databases
+- Development Tools
+- Web Technologies
+- Data and Machine Learning
+
+Only create categories that contain verified skills.
+
+Each skill item must contain:
+
+- Skill name
+- Official technology icon
+- Verified proficiency level, only when available
+- Related projects
+- Related certificates
+- Source record
+
+Do not use percentage progress bars such as:
+
+Python 95%
+JavaScript 80%
+
+unless the user explicitly provides those percentages.
+
+Prefer:
+
+- Advanced
+- Intermediate
+- Beginner
+
+only when those exact or equivalent levels are supported by a source.
+
+If no level exists, show the skill without a level.
+
+Possible resume-supported skills that must still be cross-checked with LinkedIn:
+
+- Python
+- HTML
+- CSS
+- JavaScript
+- Node.js
+- Git
+- Django
+- React
+- MongoDB
+- Next.js
+- MySQL
+
+Do not add TypeScript, PostgreSQL, Docker, AWS, Tailwind CSS, TensorFlow, PyTorch, Figma or other technologies unless verified.
+
+PAGE 6 — CERTIFICATES
+
+Route:
+/certificates
+
+Read the complete LinkedIn “Licenses & Certifications” section.
+
+Create one card per real certificate.
+
+Certificate data model:
+
+{
+  "title": "",
+  "issuer": "",
+  "issueDate": "",
+  "expirationDate": "",
+  "credentialId": "",
+  "credentialUrl": "",
+  "certificateImage": "",
+  "relatedSkills": [],
+  "sourceUrl": "",
+  "verified": true
+}
+
+Do not fill a missing field with invented information.
+
+Certificate card content:
+
+- Authentic certificate image, when supplied
+- Issuer logo
+- Certificate title
+- Issuer
+- Issue date
+- Credential ID, if publicly available
+- View Credential button
+- Related verified skills
+
+When an original certificate image has been supplied:
+
+- Use the real certificate image
+- Do not redesign it
+- Do not modify the name, date or issuer
+- Add a zoom or lightbox view
+- Keep the image high resolution
+- Protect readability on mobile
+
+When only a credential URL exists:
+
+- Show the issuer logo
+- Show a “View Credential” button
+- Do not create a fake certificate preview
+
+Group certificates by real categories only when useful.
+
+Possible grouping:
+
+- Software Development
+- Python
+- Frontend
+- Backend
+- Databases
+- Data Analysis
+- Machine Learning
+
+Do not create a category with no certificates.
+
+PAGE 7 — EXPERIENCE AND EDUCATION
+
+Route:
+/experience
+
+Create two clear sections:
+
+- Professional Experience
+- Education
+
+EXPERIENCE
+
+For every LinkedIn Experience entry, show:
+
+- Exact role title
+- Organization
+- Employment type, when listed
+- Start date
+- End date or Present
+- Location, when publicly listed
+- Verified responsibilities
+- Skills attached to that experience, when provided
+
+Use the current LinkedIn data as the primary source.
+
+The currently indexed public LinkedIn headline refers to:
+
+Healthcare IT & Website Manager at Chahardangeh 24/7 Medical Clinic
+
+Verify the exact wording from the supplied LinkedIn export before using it.
+
+Do not use an older “IT Specialist” title if LinkedIn has a newer title, unless both appear as separate experience entries.
+
+Do not embellish responsibilities.
+
+EDUCATION
+
+Display each verified LinkedIn education entry with:
+
+- Degree
+- Field of study
+- Institution
+- Start year
+- End year or Present
+- Activities, when listed
+- Related skills, when listed
+
+The resume contains a Computer Science bachelor’s entry at Islamic Azad University, but the exact LinkedIn wording must be used in the final website.
+
+Do not show degree completion when it is still marked “Present”.
+
+TIMELINE DESIGN
+
+Use a modern two-column timeline on desktop.
+
+Use a single-column timeline on mobile.
+
+Use small blue, pink and orange timeline markers.
+
+Do not use excessive animations.
+
+PAGE 8 — CONTACT
+
+Route:
+/contact
+
+Create a simple professional contact page.
+
+Include only verified contact methods:
+
+- LinkedIn
+- GitHub
+- Professional email
+
+Do not expose private data.
+
+Contact form fields:
+
+- Name
+- Email
+- Subject
+- Message
+
+Requirements:
+
+- Client-side and server-side validation
+- Accessible error messages
+- Loading state
+- Success state
+- Spam protection
+- Honeypot field
+- Environment-based email configuration
+- Mailto fallback when the email service is not configured
+
+Do not hard-code API keys.
+
+Use environment variables.
+
+Do not display the owner’s private phone number unless explicitly approved.
+
+FOOTER
+
+Use:
+
+- S3. logo
+- Name
+- LinkedIn
+- GitHub
+- Email
+- Navigation links
+- Copyright year generated dynamically
+
+Do not show fake company information.
+
+ANIMATIONS
+
+Use subtle Framer Motion interactions:
+
+- 15–25px upward reveal
+- Small fade transitions
+- Project card lift on hover
+- Gradient border transition
+- Small navigation underline motion
+- Image-gallery transition
+
+Do not use:
+
+- Heavy parallax
+- Constant bouncing
+- Large cursor trails
+- Excessive particle effects
+- Animations that delay content
+- Animations that reduce usability
+
+Respect:
+
+prefers-reduced-motion
+
+RESPONSIVE DESIGN
+
+Support:
+
+- 360px mobile
+- 390px mobile
+- 768px tablet
+- 1024px laptop
+- 1440px desktop
+- 1920px large desktop
+
+Requirements:
+
+- No horizontal scrolling
+- Readable mobile text
+- Touch-friendly controls
+- 44px minimum interactive targets
+- Correctly cropped project screenshots
+- Accessible mobile menu
+- Responsive certificate gallery
+- Responsive project gallery
+
+ACCESSIBILITY
+
+Target WCAG 2.2 AA.
+
+Include:
+
+- Semantic headings
+- Visible focus states
+- Keyboard navigation
+- Skip-to-content link
+- Accurate alt text
+- Form labels
+- ARIA only where necessary
+- Sufficient text contrast
+- Reduced-motion support
+- No color-only status communication
+
+SEO
+
+Create unique metadata for every page.
+
+Include:
+
+- Page titles
+- Meta descriptions
+- Canonical URLs
+- Open Graph metadata
+- Twitter metadata
+- Sitemap
+- Robots file
+- Person JSON-LD
+- Breadcrumb JSON-LD on project pages
+- CreativeWork or SoftwareApplication schema only when supported by project data
+
+Do not mark an unfinished project as a commercial software product.
+
+Use the real profile image for Open Graph only when approved.
+
+PERFORMANCE
+
+Target:
+
+- Lighthouse Performance: 90+
+- Accessibility: 95+
+- Best Practices: 95+
+- SEO: 95+
+
+Use:
+
+- Next/Image
+- AVIF/WebP output
+- Lazy-loaded galleries
+- Optimized font loading
+- Minimal client-side JavaScript
+- Static pages when possible
+- Image dimensions to prevent layout shift
+
+PROJECT AND CERTIFICATE ASSET VALIDATION
+
+Create a manifest:
+
+/content/image-manifest.json
+
+For every image store:
+
+{
+  "file": "",
+  "type": "profile | project | certificate",
+  "ownerApproved": true,
+  "sourceUrl": "",
+  "projectOrCertificate": "",
+  "alt": ""
+}
+
+Reject any image that:
+
+- Is AI-generated
+- Is a stock photo presented as real work
+- Has no source
+- Belongs to another developer
+- Is a generic mockup
+- Contains fabricated app data
+- Has not been approved by the owner
+
+LINK VALIDATION
+
+Create a script that checks:
+
+- LinkedIn links
+- GitHub links
+- Repository links
+- Live demo links
+- Credential URLs
+- Resume link
+- Contact links
+
+Broken links must not appear in production.
+
+DEVELOPER DOCUMENTATION
+
+Create a README containing:
+
+1. Project overview
+2. Installation
+3. Environment variables
+4. Content-source rules
+5. How to add a verified project
+6. How to add a LinkedIn screenshot
+7. How to add a certificate
+8. How to update the resume
+9. How to run validation
+10. How to deploy to Vercel
+
+Add commands:
+
+npm install
+npm run dev
+npm run validate-content
+npm run validate-links
+npm run build
+
+FINAL QUALITY CONTROL
+
+Before completing the website, verify:
+
+- The logo is S3.
+- Edu Voice AI is completely removed.
+- All project images are authentic.
+- All certificate images are authentic.
+- All visible projects exist.
+- All technologies are verified.
+- All dates match the source.
+- The current LinkedIn headline is used.
+- No old job title is presented as current by mistake.
+- No generic project screenshots remain.
+- No fake statistics remain.
+- No fake testimonials remain.
+- No Lorem Ipsum remains.
+- No private information is exposed.
+- All links work.
+- All pages are responsive.
+- Accessibility checks pass.
+- The production build contains only verified content.
+
+When a required source or asset is missing, stop and generate a report named:
+
+MISSING-CONTENT.md
+
+The report must list exactly:
+
+- Missing LinkedIn export sections
+- Missing project screenshots
+- Missing project URLs
+- Missing GitHub repositories
+- Missing certificate images
+- Missing credential URLs
+- Conflicting dates
+- Conflicting role titles
+- Unverified skill levels
+
+Do not replace missing information with generated content.

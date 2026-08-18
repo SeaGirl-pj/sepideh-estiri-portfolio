@@ -1,0 +1,14 @@
+{
+  "title": "Sepideh Estiri | Full-Stack Developer",
+  "description": "Portfolio of Sepideh Estiri, a Full-Stack Developer focused on Python, Django, JavaScript, and web application development.",
+  "openGraph": {
+    "image": "/images/profile.png"
+  },
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}
