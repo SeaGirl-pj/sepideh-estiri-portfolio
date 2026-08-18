@@ -6,7 +6,6 @@
   "scripts": {
     "dev": "vite --host 0.0.0.0",
     "generate:resume": "py scripts/generate_resume_portfolio_pdf.py",
-    "prebuild": "npm run generate:resume",
     "build": "vite build",
     "preview": "vite preview",
     "start": "node server/index.mjs",
