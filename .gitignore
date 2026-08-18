@@ -13,6 +13,6 @@ logs/
 *.log
 .claude-replay.*
 .tmp-*
-data/
+/data/
 *.db
 *.db-*

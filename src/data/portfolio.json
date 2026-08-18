@@ -1,0 +1,302 @@
+{
+  "personal": {
+    "name": "Sepideh Estiri",
+    "nameDisplay": {
+      "en": "Sepideh Estiri",
+      "fa": "سپیده استیری هستم"
+    },
+    "title": "Full-Stack Developer",
+    "headline": "Python & Django | JavaScript | Web Application Development",
+    "badge": "full-stack developer",
+    "location": {
+      "en": "Iran",
+      "fa": "ایران"
+    },
+    "languages": {
+      "en": "Persian · English",
+      "fa": "فارسی · انگلیسی"
+    },
+    "focusArea": "Full-Stack Development",
+    "email": "sepideh.estiri1234@gmail.com",
+    "linkedin": {
+      "url": "https://www.linkedin.com/in/sepideh-estiri-a08201317/",
+      "label": "sepideh-estiri-a08201317"
+    },
+    "github": {
+      "username": "SeaGirl-pj",
+      "url": "https://github.com/SeaGirl-pj",
+      "label": "github.com/SeaGirl-pj"
+    }
+  },
+  "resume": {
+    "filename": "Sepideh-Estiri-Resume-Portfolio.pdf",
+    "publicPath": "/resume/Sepideh-Estiri-Resume-Portfolio.pdf",
+    "summary": "Full-Stack Developer focused on Python, Django, JavaScript, and web application development, with hands-on experience building software for real operational environments. Experienced in developing internal management systems and maintaining production websites."
+  },
+  "hero": {
+    "greeting": {
+      "en": "Hi, I'm",
+      "fa": "سلام، من"
+    },
+    "bio": {
+      "en": "I build practical and user-focused web applications using Python, Django, JavaScript, and modern web technologies. I enjoy turning real-world requirements into functional, maintainable software.",
+      "fa": "اپلیکیشن‌های وب کاربردی و کاربرمحور را با Python، Django، JavaScript و فناوری‌های مدرن وب می‌سازم. از تبدیل نیازهای واقعی به نرم‌افزارهای قابل نگهداری لذت می‌برم."
+    },
+    "cta1": {
+      "en": "View My Project",
+      "fa": "مشاهده پروژه"
+    },
+    "cta2": {
+      "en": "About Me",
+      "fa": "درباره من"
+    }
+  },
+  "about": {
+    "paragraphs": {
+      "en": [
+        "I'm a Full-Stack Developer focused on Python, Django, JavaScript, and web application development.",
+        "My experience includes developing software for real operational environments. At Chahardangeh 24-Hour Clinic, I developed SafeHands, an accounting and inventory management system designed to support financial, administrative, and inventory workflows.",
+        "Alongside software development, I manage and maintain the clinic's website, giving me hands-on experience with both application development and the ongoing management of a production website. I enjoy turning real-world requirements into practical software solutions and continuously expanding my technical skills. I'm also currently developing my knowledge of data analysis and machine learning."
+      ],
+      "fa": [
+        "من یک Full-Stack Developer هستم با تمرکز بر Python، Django، JavaScript و توسعه وب‌اپلیکیشن.",
+        "تجربه‌ام شامل توسعه نرم‌افزار برای محیط‌های عملیاتی واقعی است. در کلینیک ۲۴ ساعته چهاردانگه، سیستم SafeHands را برای پشتیبانی از گردش‌کارهای مالی، مدیریتی و موجودی توسعه دادم.",
+        "در کنار توسعه نرم‌افزار، وبسایت کلینیک را مدیریت و نگهداری می‌کنم؛ تجربه‌ای عملی در توسعه اپلیکیشن و مدیریت یک وبسایت در حال استفاده. از تبدیل نیازهای واقعی به راه‌حل‌های نرم‌افزاری کاربردی لذت می‌برم و هم‌اکنون دانش خود را در تحلیل داده و machine learning گسترش می‌دهم."
+      ]
+    },
+    "values": [
+      {
+        "title": {
+          "en": "Practical Software",
+          "fa": "نرم‌افزار کاربردی"
+        },
+        "desc": {
+          "en": "Building applications that solve real operational problems and improve everyday workflows.",
+          "fa": "ساخت اپلیکیشن‌هایی که مسائل عملیاتی واقعی را حل می‌کنند و گردش‌کار روزانه را بهبود می‌دهند."
+        }
+      },
+      {
+        "title": {
+          "en": "Full-Stack Development",
+          "fa": "Full-Stack Development"
+        },
+        "desc": {
+          "en": "Working across frontend interfaces, backend logic, and database-driven systems.",
+          "fa": "کار در رابط‌های frontend، منطق backend و سیستم‌های مبتنی بر پایگاه داده."
+        }
+      },
+      {
+        "title": {
+          "en": "Website Management",
+          "fa": "Website Management"
+        },
+        "desc": {
+          "en": "Managing and maintaining the clinic's website, including content updates, website structure, ongoing improvements, and general website administration.",
+          "fa": "مدیریت و نگهداری وبسایت کلینیک، شامل به‌روزرسانی محتوا، ساختار سایت، بهبودهای مستمر و مدیریت کلی وبسایت."
+        }
+      }
+    ]
+  },
+  "skills": [
+    {
+      "id": "programming",
+      "resumeLabel": "Programming",
+      "label": {
+        "en": "Programming Languages",
+        "fa": "Programming Languages"
+      },
+      "items": ["Python", "JavaScript"]
+    },
+    {
+      "id": "backend",
+      "resumeLabel": "Backend",
+      "label": {
+        "en": "Backend Development",
+        "fa": "Backend Development"
+      },
+      "items": ["Django", "Node.js"]
+    },
+    {
+      "id": "frontend",
+      "resumeLabel": "Frontend",
+      "label": {
+        "en": "Frontend Development",
+        "fa": "Frontend Development"
+      },
+      "items": ["HTML5", "CSS3", "JavaScript", "Responsive Web Design"]
+    },
+    {
+      "id": "database",
+      "resumeLabel": "Database",
+      "label": {
+        "en": "Database",
+        "fa": "Database"
+      },
+      "items": ["SQLite"]
+    },
+    {
+      "id": "tools",
+      "resumeLabel": "Tools",
+      "label": {
+        "en": "Development Tools",
+        "fa": "Development Tools"
+      },
+      "items": ["Git", "GitHub", "VS Code", "Cursor"]
+    },
+    {
+      "id": "expanding",
+      "resumeLabel": "Currently Expanding",
+      "label": {
+        "en": "Currently Expanding",
+        "fa": "Currently Expanding"
+      },
+      "items": ["NumPy", "Pandas", "Data Analysis", "Machine Learning"]
+    }
+  ],
+  "experience": {
+    "role": "Software Development & Website Management",
+    "organization": "Chahardangeh 24-Hour Clinic",
+    "status": {
+      "en": "Current",
+      "fa": "در حال حاضر"
+    },
+    "description": {
+      "en": "Developed SafeHands, an internal accounting and inventory management system, while also managing and improving the clinic's website.",
+      "fa": "سیستم SafeHands را برای حسابداری و مدیریت موجودی داخلی توسعه دادم و هم‌زمان وبسایت کلینیک را مدیریت و بهبود می‌دهم."
+    },
+    "highlights": {
+      "en": [
+        "Developed SafeHands for internal operational use",
+        "Built financial and inventory management workflows",
+        "Manage and maintain the clinic's website"
+      ],
+      "fa": [
+        "توسعه SafeHands برای استفاده عملیاتی داخلی",
+        "ساخت گردش‌کارهای مالی و مدیریت موجودی",
+        "مدیریت و نگهداری وبسایت کلینیک"
+      ]
+    },
+    "websiteManagement": {
+      "title": "Website Management",
+      "description": {
+        "en": "Managing and maintaining the clinic's website, including content updates, website structure, ongoing improvements, and general website administration.",
+        "fa": "مدیریت و نگهداری وبسایت کلینیک، شامل به‌روزرسانی محتوا، ساختار سایت، بهبودهای مستمر و مدیریت کلی وبسایت."
+      }
+    }
+  },
+  "education": {
+    "academic": {
+      "title": "Bachelor of Computer Science",
+      "institution": "Azad University — Tehran Central Branch",
+      "dates": "Oct 2024 – Present",
+      "status": "In Progress",
+      "description": {
+        "en": "Building a foundation in computer science, programming, algorithms, and software development.",
+        "fa": "در حال تقویت پایه در علوم کامپیوتر، برنامه‌نویسی، الگوریتم‌ها و توسعه نرم‌افزار."
+      }
+    },
+    "training": [
+      {
+        "title": "Full-Stack Web Development",
+        "institution": "Tehran Institute of Technology — Niavaran Branch",
+        "dates": "Jan 2025 – May 2025",
+        "description": {
+          "en": "Two-term hands-on training in frontend and backend web development.",
+          "fa": "آموزش عملی دو ترمی در توسعه وب frontend و backend."
+        },
+        "skills": ["HTML", "JavaScript", "Node.js"]
+      },
+      {
+        "title": "Advanced Python",
+        "institution": "Tehran Institute of Technology",
+        "dates": "May 2024 – Nov 2024",
+        "description": {
+          "en": "Advanced Python training focused on structured programming and practical problem solving.",
+          "fa": "آموزش پیشرفته Python با تمرکز بر برنامه‌نویسی ساخت‌یافته و حل مسئله عملی."
+        },
+        "skills": ["Python", "Problem Solving", "Programming"]
+      },
+      {
+        "title": "Programming with Python",
+        "institution": "Tehran Institute of Technology",
+        "dates": "Jan 2024 – Apr 2024",
+        "description": {
+          "en": "Practical training in Python and core programming concepts.",
+          "fa": "آموزش عملی Python و مفاهیم اصلی برنامه‌نویسی."
+        },
+        "skills": ["Python", "Programming", "Problem Solving"]
+      },
+      {
+        "title": "Algorithms",
+        "institution": "Tehran Institute of Technology",
+        "dates": "Nov 2023 – Jan 2024",
+        "description": {
+          "en": "Training in algorithmic thinking, logic, and structured problem solving.",
+          "fa": "آموزش تفکر الگوریتمی، منطق و حل مسئله ساخت‌یافته."
+        },
+        "skills": ["Algorithms", "Python", "Problem Solving"]
+      }
+    ]
+  },
+  "projects": [
+    {
+      "id": "safehands",
+      "name": "SafeHands",
+      "subtitle": "Accounting & Inventory Management System",
+      "role": "Full-Stack Developer",
+      "featured": true,
+      "number": "Project 01",
+      "organization": "Chahardangeh 24-Hour Clinic",
+      "context": "A real-world application developed for internal operational use.",
+      "description": {
+        "en": "SafeHands is a full-stack accounting and inventory management system developed for Chahardangeh 24-Hour Clinic. It supports daily financial records, transaction tracking, inventory management, and role-based workflows through separate admin and personnel interfaces.",
+        "fa": "SafeHands یک سیستم حسابداری و مدیریت موجودی فول‌استک است که برای کلینیک ۲۴ ساعته چهاردانگه توسعه یافته. از سوابق مالی روزانه، ردیابی تراکنش‌ها، مدیریت موجودی و گردش‌کارهای مبتنی بر نقش از طریق پنل‌های جداگانه مدیر و پرسنل پشتیبانی می‌کند."
+      },
+      "features": [
+        "Admin & personnel panels",
+        "Financial record management",
+        "Cash & card transaction tracking",
+        "Record approval & locking",
+        "Inventory management",
+        "Role-based access"
+      ],
+      "technologies": ["Python", "Django", "SQLite", "HTML", "CSS", "JavaScript"],
+      "images": [
+        {
+          "src": "/images/safehands/01-featured.png",
+          "alt": "SafeHands project cover",
+          "fit": "cover",
+          "role": "featured"
+        },
+        {
+          "src": "/images/safehands/02-income-chart.png",
+          "alt": "SafeHands income and sales chart interface",
+          "fit": "contain",
+          "role": "screenshot"
+        },
+        {
+          "src": "/images/safehands/03-inventory-transactions.png",
+          "alt": "SafeHands inventory and daily transaction management interface",
+          "fit": "contain",
+          "role": "screenshot"
+        },
+        {
+          "src": "/images/safehands/04-financial-records.png",
+          "alt": "SafeHands financial records table with lock and unlock controls",
+          "fit": "contain",
+          "role": "screenshot"
+        }
+      ],
+      "pdfScreenshots": [
+        "/images/safehands/04-financial-records.png",
+        "/images/safehands/03-inventory-transactions.png"
+      ]
+    }
+  ],
+  "cta": {
+    "sub": {
+      "en": "I'm interested in software development opportunities, collaborations, and projects involving Python, Django, JavaScript, and web application development. Feel free to connect with me on LinkedIn.",
+      "fa": "به فرصت‌های توسعه نرم‌افزار، همکاری‌ها و پروژه‌هایی با Python، Django، JavaScript و توسعه وب‌اپلیکیشن علاقه‌مندم. از طریق LinkedIn با من در ارتباط باشید."
+    }
+  }
+}
