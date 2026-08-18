@@ -1,3 +1,12 @@
+/**
+ * In-memory rate limiter.
+ *
+ * Local: works well against a single Node process.
+ * Vercel: each serverless instance has its own memory, so limits are
+ * best-effort only (not globally shared). Server-side validation remains
+ * the primary abuse protection for this personal portfolio.
+ */
+
 const RATE_WINDOW_MS = 10 * 60 * 1000
 const RATE_MAX = 5
 

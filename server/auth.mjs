@@ -62,6 +62,10 @@ function unsign(token) {
   }
 }
 
+function isSecureCookie() {
+  return process.env.NODE_ENV === 'production' || process.env.VERCEL === '1'
+}
+
 export function createSessionCookie() {
   const token = sign({
     u: getCredentials().username,
@@ -73,7 +77,7 @@ export function createSessionCookie() {
     options: {
       httpOnly: true,
       sameSite: 'lax',
-      secure: process.env.NODE_ENV === 'production',
+      secure: isSecureCookie(),
       maxAge: MAX_AGE_MS,
       path: '/',
     },
@@ -87,7 +91,7 @@ export function clearSessionCookie() {
     options: {
       httpOnly: true,
       sameSite: 'lax',
-      secure: process.env.NODE_ENV === 'production',
+      secure: isSecureCookie(),
       maxAge: 0,
       path: '/',
     },

@@ -76,7 +76,7 @@ export async function sendContactNotification({ name, email, subject, message, c
       from: process.env.SMTP_FROM || process.env.SMTP_USER,
       to: process.env.CONTACT_RECEIVER_EMAIL,
       replyTo: email,
-      subject: `[Portfolio Contact] ${subject}`,
+      subject: `Portfolio Contact: ${subject}`,
       text,
       html,
     })

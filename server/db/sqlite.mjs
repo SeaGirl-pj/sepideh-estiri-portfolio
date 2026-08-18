@@ -4,7 +4,7 @@ import { fileURLToPath } from 'node:url'
 import { DatabaseSync } from 'node:sqlite'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
-const DATA_DIR = path.resolve(__dirname, '..', 'data')
+const DATA_DIR = path.resolve(__dirname, '..', '..', 'data')
 const DB_PATH = process.env.CONTACT_DB_PATH
   ? path.resolve(process.env.CONTACT_DB_PATH)
   : path.join(DATA_DIR, 'contact.db')
@@ -12,7 +12,7 @@ const DB_PATH = process.env.CONTACT_DB_PATH
 /** @type {DatabaseSync | null} */
 let db = null
 
-export function getDb() {
+function getDb() {
   if (db) return db
   fs.mkdirSync(path.dirname(DB_PATH), { recursive: true })
   db = new DatabaseSync(DB_PATH)
@@ -32,49 +32,52 @@ export function getDb() {
   return db
 }
 
-export function insertContactMessage({ name, email, subject, message }) {
+export async function ensureReady() {
+  getDb()
+}
+
+export async function insertContactMessage({ name, email, subject, message }) {
   const database = getDb()
-  const stmt = database.prepare(`
+  const result = database.prepare(`
     INSERT INTO contact_messages (name, email, subject, message, status)
     VALUES (?, ?, ?, ?, 'new')
-  `)
-  const result = stmt.run(name, email, subject, message)
+  `).run(name, email, subject, message)
   return Number(result.lastInsertRowid)
 }
 
-export function listContactMessages() {
-  const database = getDb()
-  return database.prepare(`
+export async function listContactMessages() {
+  return getDb().prepare(`
     SELECT id, name, email, subject, message, created_at, status
     FROM contact_messages
     ORDER BY datetime(created_at) DESC, id DESC
   `).all()
 }
 
-export function updateContactStatus(id, status) {
-  const database = getDb()
+export async function updateContactStatus(id, status) {
   const allowed = new Set(['new', 'read', 'replied'])
   if (!allowed.has(status)) return { ok: false, error: 'invalid_status' }
-  const result = database.prepare(`
+  const result = getDb().prepare(`
     UPDATE contact_messages SET status = ? WHERE id = ?
   `).run(status, id)
   if (result.changes === 0) return { ok: false, error: 'not_found' }
   return { ok: true }
 }
 
-export function deleteContactMessage(id) {
-  const database = getDb()
-  const result = database.prepare(`
+export async function deleteContactMessage(id) {
+  const result = getDb().prepare(`
     DELETE FROM contact_messages WHERE id = ?
   `).run(id)
   if (result.changes === 0) return { ok: false, error: 'not_found' }
   return { ok: true }
 }
 
-export function getContactById(id) {
-  const database = getDb()
-  return database.prepare(`
+export async function getContactById(id) {
+  return getDb().prepare(`
     SELECT id, name, email, subject, message, created_at, status
     FROM contact_messages WHERE id = ?
   `).get(id) ?? null
+}
+
+export function getDriverName() {
+  return 'sqlite'
 }

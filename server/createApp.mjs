@@ -1,13 +1,13 @@
 import express from 'express'
 import cookieParser from 'cookie-parser'
 import {
+  ensureReady,
   insertContactMessage,
   listContactMessages,
   updateContactStatus,
   deleteContactMessage,
   getContactById,
-  getDb,
-} from './db.mjs'
+} from './db/index.mjs'
 import { validateContactBody } from './validate.mjs'
 import { checkRateLimit, getClientIp } from './rateLimit.mjs'
 import {
@@ -23,11 +23,22 @@ const JSON_LIMIT = '32kb'
 
 /** API-only router — safe to mount under Vite without blocking the SPA. */
 export function createApiRouter() {
-  getDb()
-
   const router = express.Router()
   router.use(express.json({ limit: JSON_LIMIT }))
   router.use(cookieParser())
+
+  router.use(async (_req, res, next) => {
+    try {
+      await ensureReady()
+      next()
+    } catch (err) {
+      console.error('[db] init failed:', err instanceof Error ? err.message : err)
+      res.status(500).json({
+        success: false,
+        message: 'Database is unavailable. Please try again later.',
+      })
+    }
+  })
 
   router.post('/contact', async (req, res) => {
     try {
@@ -47,8 +58,8 @@ export function createApiRouter() {
         })
       }
 
-      const id = insertContactMessage(validated.data)
-      const saved = getContactById(id)
+      const id = await insertContactMessage(validated.data)
+      const saved = await getContactById(id)
 
       // Email is best-effort; never roll back the DB insert.
       void sendContactNotification({
@@ -93,9 +104,9 @@ export function createApiRouter() {
     return res.json({ success: true, authenticated: true })
   })
 
-  router.get('/admin/messages', requireAdmin, (_req, res) => {
+  router.get('/admin/messages', requireAdmin, async (_req, res) => {
     try {
-      const messages = listContactMessages()
+      const messages = await listContactMessages()
       return res.json({ success: true, messages })
     } catch (err) {
       console.error('[admin] list failed:', err instanceof Error ? err.message : err)
@@ -103,13 +114,13 @@ export function createApiRouter() {
     }
   })
 
-  router.patch('/admin/messages/:id', requireAdmin, (req, res) => {
+  router.patch('/admin/messages/:id', requireAdmin, async (req, res) => {
     const id = Number(req.params.id)
     if (!Number.isInteger(id) || id < 1) {
       return res.status(400).json({ success: false, message: 'Invalid message id.' })
     }
     const status = String(req.body?.status ?? '')
-    const result = updateContactStatus(id, status)
+    const result = await updateContactStatus(id, status)
     if (!result.ok) {
       const code = result.error === 'not_found' ? 404 : 400
       return res.status(code).json({
@@ -120,12 +131,12 @@ export function createApiRouter() {
     return res.json({ success: true, message: 'Status updated.', status })
   })
 
-  router.delete('/admin/messages/:id', requireAdmin, (req, res) => {
+  router.delete('/admin/messages/:id', requireAdmin, async (req, res) => {
     const id = Number(req.params.id)
     if (!Number.isInteger(id) || id < 1) {
       return res.status(400).json({ success: false, message: 'Invalid message id.' })
     }
-    const result = deleteContactMessage(id)
+    const result = await deleteContactMessage(id)
     if (!result.ok) {
       return res.status(404).json({ success: false, message: 'Message not found.' })
     }
@@ -135,7 +146,7 @@ export function createApiRouter() {
   return router
 }
 
-/** Full Express app for production (`npm start`). */
+/** Full Express app for local Vite middleware and Vercel serverless. */
 export function createApp() {
   const app = express()
   app.disable('x-powered-by')

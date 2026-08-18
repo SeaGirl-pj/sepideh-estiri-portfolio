@@ -1,7 +1,6 @@
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 import dotenv from 'dotenv'
-import { createApp } from './createApp.mjs'
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
 
@@ -11,21 +10,25 @@ function loadEnv() {
 }
 
 /**
- * Mounts the Express app only for /api/* so Vite still serves the SPA.
+ * Dev/preview only — never loaded during `vite build` / Vercel build.
+ * Mounts Express for /api/* while Vite serves the SPA.
  */
 export function viteContactApiPlugin() {
   return {
     name: 'vite-contact-api',
-    configureServer(server) {
+    apply: 'serve',
+    async configureServer(server) {
       loadEnv()
+      const { createApp } = await import('./createApp.mjs')
       const app = createApp()
       server.middlewares.use((req, res, next) => {
         if (!req.url?.startsWith('/api')) return next()
         return app(req, res, next)
       })
     },
-    configurePreviewServer(server) {
+    async configurePreviewServer(server) {
       loadEnv()
+      const { createApp } = await import('./createApp.mjs')
       const app = createApp()
       server.middlewares.use((req, res, next) => {
         if (!req.url?.startsWith('/api')) return next()
